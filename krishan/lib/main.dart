@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:krishan/notes/new_note_view.dart';
+import 'package:krishan/notes/create_update_note_view.dart';
 import 'package:krishan/services/auth/auth_service.dart';
 import 'package:krishan/view/constants/routes.dart';
 import 'package:krishan/view/login_view.dart';
@@ -7,9 +7,11 @@ import 'package:krishan/notes/notes_view.dart';
 import 'package:krishan/view/register_view.dart';
 import 'package:krishan/view/verify_%20email_view.dart';
 import 'package:krishan/view/notes_view.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(
     MaterialApp(
       title: 'Flutter Demo',
@@ -22,7 +24,7 @@ void main() {
         registerRoute: (context) => const RegisterView(),
         notesRoute: (context) => const NotesView(),
         verifyEmailRoute: (context) => const VerifyEmailView(),
-        newNoteRoute: (context) => const NewNoteView(),
+        createOrUpdateNoteRoute: (context) => const CreateUpdateNoteView(),
       },
     ),
   );
