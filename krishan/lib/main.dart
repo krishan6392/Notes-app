@@ -7,11 +7,10 @@ import 'package:krishan/notes/notes_view.dart';
 import 'package:krishan/view/register_view.dart';
 import 'package:krishan/view/verify_%20email_view.dart';
 import 'package:krishan/view/notes_view.dart';
-import 'package:firebase_core/firebase_core.dart';
 
-void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+
   runApp(
     MaterialApp(
       title: 'Flutter Demo',
