@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:krishan/services/auth/auth_exceptions.dart';
 import 'package:krishan/services/auth/auth_service.dart';
+import 'package:krishan/utilities/dialogs/error_dialog.dart';
 import 'package:krishan/utilities/show_error_dialog.dart';
 import 'package:krishan/view/constants/routes.dart';
 
